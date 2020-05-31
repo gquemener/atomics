@@ -1,0 +1,22 @@
+server {
+    listen       ${PORT};
+    server_name  atomics.cafe;
+    location = / {
+        root   /usr/share/nginx/html;
+        try_files /atomics.jpg /atomics.jpg;
+    }
+
+    location = /favicon.ico {
+        root   /usr/share/nginx/html;
+        try_files /favicon.ico /favicon.ico;
+    }
+
+    location / {
+        return 301 /;
+    }
+
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+}
