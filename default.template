@@ -3,7 +3,7 @@ server {
     server_name  atomics.cafe;
     location = / {
         root   /usr/share/nginx/html;
-        try_files /atomics.jpg /atomics.jpg;
+        try_files /menu.pdf /menu.pdf;
     }
 
     location = /favicon.ico {
